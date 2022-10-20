@@ -17,13 +17,18 @@ function triangleMath(event) {
   console.log(num1);
   if (num1 === num2 && num2 === num3) {
     document.getElementById("output").innerText = "Equallateral";
+    document.getElementById("right").removeAttribute("class");
   }
   else if (num1 + num2 <= num3 || num1 + num3 <= num2 || num2 + num3 <= num1){
     document.getElementById("output").innerText = "Not a Triangle, Tri again";
+    document.getElementById("circ").removeAttribute("class");
   }
-  else if (num1 === num2 || num1 === num3 || num2 === num3)
+  else if (num1 === num2 || num1 === num3 || num2 === num3) {
   document.getElementById("output").innerText = "Flying-sicilies Triangle";
+  document.getElementById("isc").removeAttribute("class");
+  }
   else {
     document.getElementById("output").innerText = "Its a Scalene triangle!";
+    document.getElementById("scal").removeAttribute("class");
   }
 }
